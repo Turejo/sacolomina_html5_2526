@@ -133,6 +133,89 @@ main > section:first-of-type p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Estilos para la página de contacto */
+.contacto-intro {
+
+    margin: 0 auto 30px auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+.contacto-intro h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 12px;
+}
+.contacto-intro p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.contacto-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 32px;
+    align-items: start;
+}
+
+.contacto-form {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(16,24,40,0.08);
+}
+
+.contacto-form h2 {
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.form-group { margin-bottom: 14px; }
+.form-group label { display:block; margin-bottom:6px; color:#374151; font-weight:600; }
+.form-group input,
+.form-group textarea {
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #e6e6e6;
+    border-radius:8px;
+    font-size:15px;
+    background:#fbfbfb;
+}
+.form-group input:focus,
+.form-group textarea:focus { outline:none; border-color:#2563eb; box-shadow:0 4px 16px rgba(37,99,235,0.12); }
+
+.btn {
+    display:inline-block;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:10px;
+    border:none;
+    font-weight:700;
+    cursor:pointer;
+    transition:background 0.18s ease, transform 0.12s ease;
+}
+.btn:hover { background:#1e4fd1; transform:translateY(-2px); }
+
+.contacto-datos {
+    background: linear-gradient(180deg,#fbfdff,#f7fbff);
+    padding:22px;
+    border-radius:12px;
+    border:1px solid #eef6ff;
+}
+.contacto-datos h2{ margin-bottom:10px; color:#0f172a }
+.contacto-datos p{ color:#374151; margin-bottom:8px }
+
+/* Ajustes responsivos para contacto */
+@media (max-width: 900px) {
+    .contacto-contenido { grid-template-columns: 1fr; }
+    .contacto-intro { padding: 28px 12px; }
+    .contacto-form { padding: 20px; }
+}
+
+
 /* Móviles */
 @media (max-width: 576px) {
     .menu-mobile {
