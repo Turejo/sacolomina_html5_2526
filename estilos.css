@@ -4,6 +4,52 @@
     box-sizing: border-box;
 }
 
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.menu-mobile {
+    display: none;
+    position: absolute;
+    left: 20px;
+}
+
+.menu-mobile summary {
+    cursor: pointer;
+    font-size: 28px;
+    color: #333;
+    font-weight: 500;
+    user-select: none;
+    padding: 10px;
+}
+
+.menu-mobile nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.menu-desktop {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -45,4 +91,111 @@ main {
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+        justify-content: flex-start;
+    }
+
+    .menu-mobile nav li {
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+    }
+
+    .menu-mobile nav a {
+        font-size: 18px;
+    }
+
+    .menu-mobile nav li:last-child {
+        border-bottom: none;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    nav ul {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Portátiles */
+@media (min-width: 769px) and (max-width: 1200px) {
+    nav ul {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    main {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1201px) {
+    nav ul {
+        gap: 30px;
+        padding: 25px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
 }
