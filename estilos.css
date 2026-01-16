@@ -89,19 +89,27 @@ main {
 main > section:first-of-type {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    background: url('../imagenes/imagen_inicio.png') center/cover no-repeat;
+    background-color: #f5f5f5;
     border-radius: 12px;
     margin-bottom: 40px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main > section:first-of-type h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 main > section:first-of-type p {
     font-size: 18px;
-    color: #666;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .grid-container {
