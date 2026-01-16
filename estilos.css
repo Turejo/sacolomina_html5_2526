@@ -15,7 +15,7 @@ header {
 .menu-mobile {
     display: none;
     position: absolute;
-    left: 20px;
+    right: 20px;
 }
 
 .menu-mobile summary {
@@ -25,6 +25,20 @@ header {
     font-weight: 500;
     user-select: none;
     padding: 10px;
+    list-style: none;
+}
+
+.menu-mobile summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-mobile summary::marker {
+    display: none;
+}
+
+.menu-mobile summary:hover {
+    color: #0066cc;
+    transition: color 0.3s ease;
 }
 
 .menu-mobile nav {
