@@ -94,7 +94,7 @@ main {
 main > section:first-of-type {
     text-align: center;
     padding: 80px 20px;
-    background: url('../imagenes/imagen_inicio.png') center/cover no-repeat;
+    background: url('./imagenes/imagen_inicio.png') center/cover no-repeat;
     background-color: #f5f5f5;
     border-radius: 12px;
     margin-bottom: 40px;
